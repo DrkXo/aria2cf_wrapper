@@ -48,7 +48,7 @@ class Aria2cConnection extends Aria2cMethodsInterface {
 
   Future<dynamic> _requestApi(String method, List params) async {
     if (secret != "") {
-      if (method != "system.multicall") {
+      if (method != Aria2cRpcMethod.systemMultiCall.name) {
         params.insert(0, "token:$secret");
       } else {
         for (var i = 0; i < params.length; i++) {
