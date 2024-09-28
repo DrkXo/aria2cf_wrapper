@@ -11,12 +11,12 @@ void main() async {
     aria2config: aria2serverConfig,
   );
 
-  final pid = await service.tryStart();
-  logger('$pid');
+  /* final pid = await service.tryStart();
+  logger('$pid'); */
 
   try {
     // protocol can be "http" or "websocket", default http
-    Aria2cWrapper aria2c = Aria2cWrapper()..connect();
+    Aria2cWrapper aria2c = Aria2cWrapper.websocket()..connect();
 
     final add = await aria2c
         .addUri(['https://files.testfile.org/PDF/30MB-TESTFILE.ORG.pdf']);

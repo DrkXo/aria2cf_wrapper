@@ -5,7 +5,7 @@ enum Aria2cConnectionType {
   ),
   websocket(
     name: 'websocket',
-    url: 'wss://127.0.0.1:6800/jsonrpc',
+    url: 'ws://127.0.0.1:6800/jsonrpc',
   );
 
   final String name;
