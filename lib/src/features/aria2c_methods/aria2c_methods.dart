@@ -1,7 +1,7 @@
 part of '../aria2c_connector/aria2c_connection.dart';
 
 enum Aria2cRpcMethod {
-  unpauseAll('unpauseAll'),
+  unpauseAll('aria2.unpauseAll'),
   unpause('aria2.unpause'),
   tellWaiting('aria2.tellWaiting'),
   tellStopped('aria2.tellStopped'),
